@@ -17,7 +17,7 @@ class JchTest < Minitest::Test
   def test_rotation_on_removal
     key = rand(2**32..2**64-1)
     num_nodes = 10
-    last_node = -1
+    last_node = 0
     while(num_nodes > 1)
       current_node = hash(key, num_nodes)
       next_node = hash(key, num_nodes-=1)
