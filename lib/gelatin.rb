@@ -1,7 +1,9 @@
-require "gelatin/version"
-require "gelatin/hashable"
-require "gelatin/node"
-require "gelatin/ring"
+require 'gelatin/version'
+require 'gelatin/node'
+require 'gelatin/ring'
 
+require 'zlib'
+
+# Gelatin: Jump Consistent Hash Rubygem
 module Gelatin
 end

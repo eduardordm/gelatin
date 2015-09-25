@@ -23,7 +23,7 @@ module Gelatin
     # If the object can fit in a uint64, you could use the object
     # itself as the key.
     def get(key)
-      @nodes[hash(key, @nodes.size)]
+      @nodes[hash(Zlib::crc32(key), @nodes.size)]
     end
   end
 end

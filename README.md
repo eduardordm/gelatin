@@ -58,7 +58,7 @@ sh = Gelatin::Ring.new
 (1...254).each do |i|
   sh.add Gelatin::Node.new("192.168.0.#{i}")
 end
-puts sh.get("localhost".unpack('q*').first) # returns the server for this key
+puts sh.get(::Zlib::crc32("s3.amazon.com")) # returns the server for this key
 ```
 
 You might use the same hasher to hash long strings like file paths, but you need to split the string into 64bit chunks.

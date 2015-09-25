@@ -6,7 +6,7 @@ class RingTest < Minitest::Test
     (1...254).each do |i|
       sh.add Gelatin::Node.new("192.168.0.#{i}")
     end
-    refute_nil sh.get(Item.new.key)
-    assert valid_v4? sh.get(Item.new.key).addr
+    refute_nil sh.get("s3.amazon.com")
+    assert valid_v4? sh.get("s3.amazon.com").addr
   end
 end
